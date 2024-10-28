@@ -1,10 +1,18 @@
-
+import { Route, Routes } from "react-router";
+import Navbar from "./component/Navbar";
+import Home from './component/Home'
+import AllPost from './component/AllPost'
 
 function App() {
   return (
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <div>
+      <Navbar/>
+
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/all' element={<AllPost></AllPost>}></Route>
+      </Routes>
+    </div>
   );
 }
 
